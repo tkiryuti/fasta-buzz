@@ -1,10 +1,10 @@
 # fasta-buzz
 Set of scripts to split or subsample FASTA files.
 
-# Splitting FASTA files
+## Splitting FASTA files
 `fasta-split.py` evenly distributes sequences in a FASTA file among a desired number of files.
 
-## __Examples__ 
+### __Examples__ 
 
 See the help message at any time:
 ``` bash
@@ -23,7 +23,7 @@ wrap sequences with 60 characters per line:
 ./fasta-split.py -i seq.faa -n 5 -w 60
 ```
 
-## __Troubleshooting__ 
+### __Troubleshooting__ 
 
 If permission is denied for running `fasta-split.py` then add permission to execute for user and group:
 ``` bash
