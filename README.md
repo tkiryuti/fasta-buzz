@@ -1,6 +1,8 @@
 # fasta-buzz
 Set of scripts to split or subsample FASTA files.
 
+[`fasta-split.py`](#splitting-fasta-files)
+
 ## Splitting FASTA files
 `fasta-split.py` evenly distributes sequences in a FASTA file among a desired number of files.
 
@@ -11,13 +13,12 @@ See the help message at any time:
 ./fasta-split.py -h
 ```
 
-Split a fasta file "seq.faa" into 10 files by default: "seq.faa-1", "seq.faa-2", ... "seq.faa-10" in which
-sequences do not wrap by default:
+Split a fasta file "seq.faa" into 10 files by default: "seq.faa-1", "seq.faa-2", ... "seq.faa-10":
 ``` bash
 ./fasta-split.py -i seq.faa
 ```
 
-Split a fasta file "seq.faa" into 5 files by default: "seq.faa-1", "seq.faa-2", ... "seq.faa-10" and
+Split a fasta file "seq.faa" into 5 files by default: "seq.faa-1", "seq.faa-2", ... "seq.faa-5" and
 wrap sequences with 60 characters per line:
 ``` bash
 ./fasta-split.py -i seq.faa -n 5 -w 60
