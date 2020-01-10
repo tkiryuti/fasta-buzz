@@ -1,7 +1,7 @@
 # fasta-buzz
 Set of scripts to split or subsample FASTA files.
 
-# Splitting FASTA files (`fasta-split.py`)
+# Splitting FASTA files
 `fasta-split.py` evenly distributes sequences in a FASTA file among a desired number of files.
 
 ## __Examples__ 
