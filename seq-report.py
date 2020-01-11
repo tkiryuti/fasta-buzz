@@ -10,13 +10,11 @@ import argparse
 
 # Parse arguments
 parser = argparse.ArgumentParser(
-	description='Evenly split a fasta file.',
-	epilog='Files created will be named after original file with appended "-1", "-2", etc.')
+	description='See sequence information (length and description) from a FASTA file.')
 parser.add_argument('-i', '--input', type=str, dest='input',
 	help='input fasta file')
 parser.add_argument('-b', '--brief', action='store_true', dest='brief',
 	help='only view results for first 10 sequences')
-
 args = parser.parse_args()
 
 # Define arguments
