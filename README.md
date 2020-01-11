@@ -1,8 +1,8 @@
 # fasta-buzz
 Set of scripts to split or subsample FASTA files.
 
-* [`fasta-split.py`](#splitting-fasta-files)
-* [`seq-report.py`](#reporting-sequences-in-fasta-file)
+* [`fasta-split.py`](#splitting-fasta-files) - Splitting a FASTA file
+* [`seq-report.py`](#reporting-sequences-in-fasta-file) - Reporting sequences in FASTA file
 
 ## Splitting FASTA files
 `fasta-split.py` evenly distributes sequences in a FASTA file among a desired number of files.
@@ -35,20 +35,19 @@ See the help message at any time:
 ./seq-report.py -h
 ```
 
-See sequence information (length and description) from a FASTA file "seq.fasta".
+See sequence information (length and description) from a FASTA file "seq.fasta":
 ``` bash
 ./seq-report.py -i seq.fasta
 ```
 
-Brief option: see sequence information from the first 10 sequences of "seq.fasta".
+See sequence information in brief, from the first 10 sequences of "seq.fasta":
 ``` bash
 ./seq-report.py -i seq.fasta -b
 ```
 
 ## __Troubleshooting__ 
 
-If permission is denied for running any script, add permission to execute for user and group.
-For example, for `fasta-split.py`:
+If permission is denied for running any script, add permission to execute for user and group. For example:
 ``` bash
 chmod ug+x fasta-split.py
 ```
