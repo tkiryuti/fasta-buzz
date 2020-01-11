@@ -2,6 +2,7 @@
 Set of scripts to split or subsample FASTA files.
 
 [`fasta-split.py`](#splitting-fasta-files)
+
 [`seq-report.py`](#reporting-sequences-in-fasta-file)
 
 ## Splitting FASTA files
@@ -26,7 +27,7 @@ wrap sequences with 60 characters per line:
 ```
 
 ## Reporting sequences in FASTA file
-`seq-report.py` prints a table of sequence lengths and descriptions from a FASTA file
+`seq-report.py` prints a table of sequence lengths and descriptions from a FASTA file.
 
 ### __Examples__ 
 
