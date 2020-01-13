@@ -37,14 +37,14 @@ if seqFile is None:
 Sequences = []
 
 with open(seqFile, "r") as fh:
-		for line in fh:
-				line = line.strip('\n')
-				match = re.search('^>', line)
-				if match:
-						summaryLine = line
-						Sequences.append( [summaryLine, ''] )
-				else:
-						Sequences[-1][1]  += line
+	for line in fh:
+		line = line.strip('\n')
+		match = re.search('^>', line)
+		if match:
+			summaryLine = line
+			Sequences.append( [summaryLine, ''] )
+		else:
+			Sequences[-1][1]  += line
 
 numSeq = len(Sequences)
 
@@ -65,26 +65,23 @@ remainingSeq = remainSeq = numSeq%numFiles
 
 # Each for loop creates a sequence file
 for x in range(numFiles):
-		with open(seqFile + '-' + str(x+1), "w") as fh:
-				# Add one additional sequence?
-				if remainingSeq > 0:
-						writeAdditional = 1
-				else:
-						writeAdditional = 0
-				# Number of sequences to write to this file
-				numSeq2write = seqPerFile + writeAdditional
-				remainingSeq -= 1
-				# Write each sequence into file in original sequence order
-				for i in range(numSeq2write):
-					targetSeq = Sequences.pop(0)
-					summaryLine = targetSeq[0]
-					sequence = targetSeq[1]
-					fh.write(summaryLine + '\n')
-					if wrapSeq == 0:
-						fh.write(sequence + '\n')
-					else:
-						for n in range(0, len(sequence), wrapSeq):
-							fh.write(sequence[n:n+wrapSeq] + '\n')
-
-
-
+	with open(seqFile + '-' + str(x+1), "w") as fh:
+		# Add one additional sequence?
+		if remainingSeq > 0:
+			writeAdditional = 1
+		else:
+			writeAdditional = 0
+		# Number of sequences to write to this file
+		numSeq2write = seqPerFile + writeAdditional
+		remainingSeq -= 1
+		# Write each sequence into file in original sequence order
+		for i in range(numSeq2write):
+			targetSeq = Sequences.pop(0)
+			summaryLine = targetSeq[0]
+			sequence = targetSeq[1]
+			fh.write(summaryLine + '\n')
+			if wrapSeq == 0:
+				fh.write(sequence + '\n')
+			else:
+				for n in range(0, len(sequence), wrapSeq):
+					fh.write(sequence[n:n+wrapSeq] + '\n')
